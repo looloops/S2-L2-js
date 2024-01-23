@@ -112,13 +112,23 @@ if (a > b) {
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const number = 35;
+
+if (typeof number === "number" && isNaN(number) === false) {
+  console.log("The given variable is a number");
+} else {
+  console.log("The given variable is not a number");
+}
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+if (number % 2 === 0) {
+  console.log("Il numero è pari");
+} else {
+  console.log("Il numero è dispari");
+}
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
@@ -132,7 +142,14 @@ if (a > b) {
     }
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let val = 3;
+if (val >= 10) {
+  console.log("Uguale a 10 o maggiore");
+} else if (val < 5) {
+  console.log("Meno di 5");
+} else {
+  console.log("Meno di 10");
+}
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
@@ -144,28 +161,53 @@ const me = {
   skills: ["javascript", "html", "css"],
 };
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+me.city = "Toronto";
+console.log(me);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+delete me.lastName;
+console.log(me);
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+lastSkill = me.skills.pop();
+console.log(lastSkill);
+console.log(me);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+//soluzione usando il metodo .fill() e .map()
+let numbers = [];
+let numbers2 = [];
+
+numbers.length = 10;
+numbers.fill(null, 0, 10);
+
+numbers = numbers.map(function (currentNumber, index) {
+  return index + 1;
+});
+
+console.log(numbers);
+
+//soluzione con assegnazione manuale
+
+let counting = [];
+counting = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(counting);
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const lastElement = counting.length - 1;
+
+counting.splice(lastElement, 1, 100);
+console.log(counting);
