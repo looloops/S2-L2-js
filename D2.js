@@ -2,40 +2,75 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const num1 = 25;
+const num2 = 17;
+
+if (num1 > num2) {
+  console.log(`Il numero più grande è ${num1}`);
+} else {
+  console.log(`Il numero più grande è ${num2}`);
+}
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+if (num1 !== 5) {
+  console.log(`not equal`);
+}
 
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+if (num1 % 5 == false) {
+  console.log(`divisibile per 5`);
+}
 
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+if (num1 === 8 || num2 === 8 || num1 + num2 === 8 || num1 - num2 === 8 || num2 - num1 === 8) {
+  console.log("Il valore di uno di essi è 8 oppure la loro addizione/sottrazione è uguale a 8");
+}
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
   C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
+let totalShoppingCart = 50;
+const shippingCost = 10;
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+if (totalShoppingCart <= 50) {
+  console.log(
+    `Il totale è di ${totalShoppingCart} + ${shippingCost} di spedizione. Per ottenere la spedizione gratuita aggiungi ${
+      51 - totalShoppingCart
+    } euro al tuo carrello`
+  );
+} else {
+  console.log("Complimenti hai ottento la spedizione gratuita!");
+}
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let blackFriday = 20;
+
+totalShoppingCart = totalShoppingCart - (totalShoppingCart * blackFriday) / 100;
+
+if (totalShoppingCart <= 50) {
+  console.log(
+    `E' Black Friday!! Il 20% di sconto è stato applicato. Il totale è di ${totalShoppingCart} + ${shippingCost} di spedizione. Per ottenere anche la spedizione gratuita aggiungi ${
+      51 - totalShoppingCart
+    } euro al tuo carrello`
+  );
+} else {
+  console.log("E' Black Friday!! Il 20% di sconto è stato applicato. Complimenti hai ottento la spedizione gratuita!");
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -43,7 +78,14 @@
   Alla fine mostra il risultato in console.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let var1 = 7;
+let var2 = 30;
+let var3 = 10;
+
+
+if() {
+
+}
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -76,10 +118,10 @@
 */
 
 const me = {
-  name: 'John',
-  lastName: 'Doe',
-  skills: ['javascript', 'html', 'css'],
-}
+  name: "John",
+  lastName: "Doe",
+  skills: ["javascript", "html", "css"],
+};
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
