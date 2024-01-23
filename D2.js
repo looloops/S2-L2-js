@@ -78,15 +78,36 @@ if (totalShoppingCart <= 50) {
   Alla fine mostra il risultato in console.
 */
 
-let var1 = 7;
-let var2 = 30;
-let var3 = 10;
+let a = 2;
+let b = 6;
+let c = 7;
+let ordinata = [];
 
-
-if() {
-
+if (a > b) {
+  if (b > c) {
+    ordinata = [a, b, c];
+    console.log(ordinata);
+  } else {
+    ordinata = [a, c, b];
+    console.log(ordinata);
+  }
+} else if (b > c) {
+  if (a > c) {
+    ordinata = [b, a, c];
+    console.log(ordinata);
+  } else {
+    ordinata = [b, c, a];
+    console.log(ordinata);
+  }
+} else {
+  if (c > b) {
+    ordinata = [c, b, a];
+    console.log(ordinata);
+  } else {
+    ordinata = [c, a, b];
+    console.log(ordinata);
+  }
 }
-
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
